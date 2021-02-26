@@ -1,0 +1,17 @@
+<h2>Lista de dispositivos</h2>
+<app-disp-detalle (dispCreado)="onDispCreado()"></app-disp-detalle>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let d of listadoDispositivos" [ngClass]="{'encendido':d.estatus}">
+      <td >{{d.nombre}}</td>
+      <td>{{d.descripcion}}</td>
+      <td>{{d.estatus}}</td>
+    </tr>
+  </tbody>
+</table>
